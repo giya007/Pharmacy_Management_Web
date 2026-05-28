@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Sales Report</h2>
+<p>Date: {{date}}</p>
+<table border="1">
+<tr>
+    <th>Med ID</th>
+    <th>Name</th>
+    <th>Qty</th>
+    <th>Value</th>
+</tr>
+{% for r in rec %}
+<tr>
+    <td>{{ r[0] }}</td>
+    <td>{{ r[1] }}</td>
+    <td>{{ r[2] }}</td>
+    <td>{{ r[3] }}</td>
+</tr>
+{% endfor %}
+</table>
+<h3>Total: {{ total }}</h3>
+<br>
+<a href="/">Home</a>
+</body>
+</html>

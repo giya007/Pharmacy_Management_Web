@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>----------------------------------------- BILL -------------------------------------------</h2>
+<h2>--------------------------------------- ABC PHARMACY ------------------------------------</h2>
+<p>Date: {{pur_date}}</p>
+<p>Customer ID: {{customerid}}</p>
+<p>Customer name: {{Result2}}</p>
+<p>{{head}}</p>
+<table border="1">
+<tr>
+    <th>Med ID</th>
+    <th>Name</th>
+    <th>Mfr</th>
+    <th>Exp_date</th>
+    <th>Qty</th>
+    <th>MRP</th>
+    <th>Value</th>
+</tr>
+{% for r in Result %}
+<tr>
+    <td>{{ r[0] }}</td>
+    <td>{{ r[1] }}</td>
+    <td>{{ r[2] }}</td>
+    <td>{{ r[3] }}</td>
+    <td>{{ r[4] }}</td>
+    <td>{{ r[5] }}</td>
+    <td>{{ r[6] }}</td>
+</tr>
+{% endfor %}
+</table>
+<p>Total: {{Total}}</p>
+<p>{{head}}</p>
+<p>THANKYOU FOR CHOOSING ABC PHARMACY!</p>
+<p>VISIT US AGAIN FOR ALL YOUT HEALTHCARE NEEDS</p>
+<p>{{head}}</p>
+<p>{{head}}</p>
+<br>
+<a href="/">Home</a>
+</body>
+</html>
+

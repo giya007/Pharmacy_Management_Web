@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!-- Page title -->
+<h2>Inventory</h2>
+
+<!-- Inventory table -->
+<table border="1">
+
+<!-- Table header -->
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Mfr</th>
+    <th>Expiry_date</th>
+    <th>Stock</th>
+    <th>MRP</th>
+</tr>
+
+<!--
+Jinja loop:
+Iterates through "medicines" list sent from Flask.
+Each "m" represents one row from the inventory table.
+-->
+{% for m in medicines %}
+<tr>
+  
+    <td>{{ m[0] }}</td>
+
+    <td>{{ m[1] }}</td>
+   
+    <td>{{ m[2] }}</td>
+
+    <td>{{ m[3] }}</td>
+
+    <td>{{ m[4] }}</td>
+
+    <td>{{ m[5] }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+<br>
+
+<!-- Navigation link back to homepage -->
+<a href="/">Home</a>
+
+</body>
+</html>
+
+

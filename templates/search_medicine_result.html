@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!-- Page title -->
+<h2>Result</h2>
+{% if medicine %}
+<!-- Inventory table -->
+<table border="1">
+<!-- Table header -->
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Mfr</th>
+    <th>Expiry_date</th>
+    <th>Stock</th>
+    <th>MRP</th>
+</tr>
+<tr>
+ 
+    <td>{{ medicine[0] }}</td>
+
+   
+    <td>{{ medicine[1] }}</td>
+
+    
+    <td>{{ medicine[2] }}</td>
+
+    
+    <td>{{ medicine[3] }}</td>
+
+    <td>{{ medicine[4] }}</td>
+
+    <td>{{ medicine[5] }}</td>
+</tr>
+</table>
+{% else %}
+<p>No medicine found</p>
+{% endif %}
+<a href="/inventory">Back</a>

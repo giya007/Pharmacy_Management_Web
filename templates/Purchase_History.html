@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!-- Page title -->
+<h2>Purchase History</h2>
+
+<!-- Purchase_History table -->
+<table border="1">
+
+<!-- Table header -->
+<tr>
+    <th>pur_id</th>
+    <th>cust_id</th>
+    <th>med_id</th>
+    <th>med_name</th>
+    <th>mfr</th>
+    <th>p_date</th>
+    <th>qty</th>
+    <th>mrp</th>
+    <th>value</th>
+</tr>
+
+<!--
+Jinja loop:
+Iterates through the pur_history list sent from Flask.
+Each "m" represents one row from the Purchase_History table.
+-->
+{%for m in pur_history%}
+<tr>
+    <!-- Purchase ID -->
+    <td>{{ m[0] }}</td>
+
+    <!-- Customer ID -->
+    <td>{{ m[1] }}</td>
+
+    <!-- Medicine ID -->
+    <td>{{ m[2] }}</td>
+
+    <!-- Medicine name -->
+    <td>{{ m[3] }}</td>
+
+    <!-- Mfr -->
+    <td>{{ m[4] }}</td>
+
+    <!-- p_date -->
+    <td>{{ m[5] }}</td>
+
+    <!-- qty -->
+    <td>{{ m[6] }}</td>
+
+    <!-- mrp -->
+    <td>{{ m[7] }}</td>
+
+    <!-- value -->
+    <td>{{ m[8] }}</td>
+
+
+
+</tr>
+{% endfor %}
+
+</table>
+
+<br>
+
+<!-- Navigation link back to homepage -->
+<a href="/">Home</a>
+
+</body>
+</html>
